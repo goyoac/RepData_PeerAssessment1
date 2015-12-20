@@ -1,5 +1,6 @@
-# Reproducible Research: Peer Assessment 1
-
+# Reproducible Research - Peer Assessment 1
+========================================
+by Gregorio Ambrosio
 
 ## Loading and preprocessing the data
 1. Load the data
@@ -52,7 +53,7 @@ stepsPerDay <- aggregate(steps ~ date,data = activity, sum, na.rm = TRUE)
 hist(stepsPerDay$steps, main = "Histogram of total steps per day", xlab = "Steps", col = "royalblue2")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 3 .Calculate and report the mean and median of the total number of steps taken per day
 
@@ -109,7 +110,7 @@ xyplot(stepsPerInterval$steps ~ stepsPerInterval$interval,
      ylab = "Average number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -164,7 +165,7 @@ stepsPerDayFilled <- aggregate(steps ~ date,data = activityFilled, sum, na.rm = 
 hist(stepsPerDayFilled$steps, main = "Histogram of total steps per day without NA's", xlab="Steps", col="royalblue2")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
 ```r
 meanOfStepsPerDayFilled <- mean(stepsPerDayFilled$steps)
@@ -255,5 +256,5 @@ xyplot(steps ~ interval | factor(daytype),
        xlab = "5-minute interval")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
